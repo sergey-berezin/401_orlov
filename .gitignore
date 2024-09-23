@@ -9,6 +9,7 @@
 # VS Code
 .vscode/
 .vs/
+nuget
 
 # Build results
 

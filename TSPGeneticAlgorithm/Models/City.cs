@@ -12,7 +12,7 @@ namespace TSPGeneticAlgorithm.Models
             ID = id;
             X = x;
             Y = y;
-            Name = $"City_{ID}";
+            Name = $"City_{ID+1}";
         }
 
         public City(int id, string name, double x, double y)

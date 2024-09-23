@@ -45,14 +45,12 @@ public class GeneticAlgorithm
             chromosome.Fitness = FitnessEvaluator.EvaluateFitness(chromosome);
 
         var currentBest = Population.OrderByDescending(c => c.Fitness).First();
-        bool improved = false;
 
         if (BestChromosome == null || currentBest.Fitness > BestChromosome.Fitness * (1 + _improvementThreshold))
         {
             BestChromosome = new Chromosome(currentBest.Cities);
             BestChromosome.Fitness = currentBest.Fitness;
             _stagnationCount = 0;
-            improved = true;
         }
         else
             _stagnationCount++;
