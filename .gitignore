@@ -9,7 +9,6 @@
 # VS Code
 .vscode/
 .vs/
-nuget
 
 # Build results
 
@@ -136,3 +135,4 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+*.nupkg

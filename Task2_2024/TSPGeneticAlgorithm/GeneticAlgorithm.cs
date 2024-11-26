@@ -24,17 +24,15 @@ public class GeneticAlgorithm
         ICrossoverOperator crossoverOperator,
         IMutationOperator mutationOperator,
         int maxStagnationCount,
-        double improvementThreshold,
-        Chromosome? bestChromosome=null,
-        int generation=0)
+        double improvementThreshold)
     {
         Population = initialPopulation;
         FitnessEvaluator = fitnessEvaluator;
         SelectionOperator = selectionOperator;
         CrossoverOperator = crossoverOperator;
         MutationOperator = mutationOperator;
-        Generation = generation;
-        BestChromosome = bestChromosome;
+        Generation = 0;
+        BestChromosome = null;
 
         _stagnationCount = 0;
         _maxStagnationCount = maxStagnationCount;
